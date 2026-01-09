@@ -29,5 +29,5 @@ COPY --from=builder /app/dist ./dist
 # Expose port
 EXPOSE 4323
 
-# Start the server
-CMD ["http-server", "dist", "-p", "4323", "-c-1"]
+# Start the server - bind to 0.0.0.0 to accept external connections
+CMD ["http-server", "dist", "-p", "4323", "-a", "0.0.0.0", "-c-1"]
