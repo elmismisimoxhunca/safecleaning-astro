@@ -27,7 +27,7 @@ RUN npm install -g http-server
 COPY --from=builder /app/dist ./dist
 
 # Expose port
-EXPOSE 80
+EXPOSE 3000
 
 # Start the server - bind to 0.0.0.0 to accept external connections
-CMD ["http-server", "dist", "-p", "80", "-a", "0.0.0.0", "-c-1"]
+CMD ["http-server", "dist", "-p", "3000", "-a", "0.0.0.0", "-c-1"]

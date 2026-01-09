@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: safecleaning-astro
-    ports:
-      - "80:80"
+    expose:
+      - "3000"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
