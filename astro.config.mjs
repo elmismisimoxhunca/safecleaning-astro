@@ -5,4 +5,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://safecleaning-astro.netlify.app',
   integrations: [],
+  server: {
+    port: 4323,
+    host: true
+  }
 });
