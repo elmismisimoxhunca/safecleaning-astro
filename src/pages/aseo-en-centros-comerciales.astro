@@ -34,6 +34,26 @@ import '../styles/global.css';
     p { margin-bottom: 20px; color: #444; }
     .stat-box { background: #092241; color: white; padding: 30px; border-radius: 15px; text-align: center; }
     .stat-number { font-size: 3rem; font-weight: 700; color: #6386FE; }
+    
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      .l-subheader-h { padding: 12px 15px; flex-direction: column; gap: 15px; }
+      .l-subheader-h > div:first-child { width: 100%; text-align: center; }
+      .l-subheader-h > div:first-child img { max-width: 120px; }
+      .w-nav { display: none; }
+      .l-subheader-h > div:last-child { width: 100%; display: flex; justify-content: center; gap: 10px; }
+      h1 { font-size: 1.8rem !important; }
+      h2 { font-size: 1.5rem !important; }
+      h3 { font-size: 1.2rem !important; }
+      .cta-button { padding: 15px 30px !important; font-size: 16px !important; }
+      .stat-box { padding: 20px !important; }
+      .stat-number { font-size: 1.8rem !important; }
+      .two-column-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+      .three-column-grid { grid-template-columns: 1fr !important; }
+      .two-column-grid-dark { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; text-align: center; }
+      section { padding: 40px 20px !important; }
+    }
   </style>
 </head>
 <body>
@@ -71,7 +91,7 @@ import '../styles/global.css';
     <!-- Stats -->
     <section style="padding: 60px 20px; background: white;">
       <div style="max-width: 1000px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="three-column-grid">
           <div class="stat-box">
             <p class="stat-number">24/7</p>
             <p>Servicio disponible todos los días</p>
@@ -119,7 +139,7 @@ import '../styles/global.css';
     <!-- Services Detail -->
     <section style="padding: 80px 20px; background: white;">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;" class="two-column-grid">
           <div>
             <h2>¿Qué Incluye Nuestro Servicio de Aseo en Centros Comerciales?</h2>
             <p>Nuestro <strong>servicio de limpieza para malls</strong> es integral y adaptado a cada centro comercial:</p>
@@ -147,7 +167,7 @@ import '../styles/global.css';
         <h2 style="text-align: center;">Áreas Críticas en Centros Comerciales</h2>
         <p style="text-align: center; color: #666; margin-bottom: 40px;">Nuestro servicio de aseo cubre todas las áreas de alto impacto</p>
         
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="three-column-grid">
           <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
             <div style="font-size: 50px; margin-bottom: 15px;">🍔</div>
             <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Food Courts</h3>
@@ -187,7 +207,7 @@ import '../styles/global.css';
       <div style="max-width: 900px; margin: 0 auto;">
         <h2 style="color: white; text-align: center;">Beneficios de Nuestro Servicio de Aseo para Malls</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px;" class="two-column-grid-dark">
           <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
             <h4 style="color: #6386FE; margin-bottom: 10px;">🏆 Experiencia en Retail</h4>
             <p style="color: rgba(255,255,255,0.8);">Más de 10 años trabajando con centros comerciales de todos los tamaños en Santiago.</p>
@@ -220,7 +240,7 @@ import '../styles/global.css';
   </main>
 
   <footer style="background: #333; color: white; padding: 60px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;" class="footer-grid">
       <div style="text-align: center;"><img src="/images/logo-b.png" alt="Safe Cleaning Logo" style="max-width: 250px;" /></div>
       <div>
         <h4 style="margin-bottom: 20px;">Contacto</h4>

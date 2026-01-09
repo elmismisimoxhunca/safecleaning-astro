@@ -36,6 +36,25 @@ import '../styles/global.css';
     .location-link:hover { transform: translateX(10px); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
     .stat-box { background: #092241; color: white; padding: 30px; border-radius: 15px; text-align: center; }
     .stat-number { font-size: 3rem; font-weight: 700; color: #6386FE; }
+    
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      .l-subheader-h { padding: 12px 15px; flex-direction: column; gap: 15px; }
+      .l-subheader-h > div:first-child { width: 100%; text-align: center; }
+      .l-subheader-h > div:first-child img { max-width: 120px; }
+      .w-nav { display: none; }
+      .l-subheader-h > div:last-child { width: 100%; display: flex; justify-content: center; gap: 10px; }
+      h1 { font-size: 1.8rem !important; }
+      h2 { font-size: 1.5rem !important; }
+      h3 { font-size: 1.2rem !important; }
+      .cta-button { padding: 15px 30px !important; font-size: 16px !important; }
+      .stat-box { padding: 20px !important; }
+      .stat-number { font-size: 1.8rem !important; }
+      .two-column-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+      .three-column-grid { grid-template-columns: 1fr !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; text-align: center; }
+      section { padding: 40px 20px !important; }
+    }
   </style>
 </head>
 <body>
@@ -73,7 +92,7 @@ import '../styles/global.css';
     <!-- Stats -->
     <section style="padding: 60px 20px; background: white;">
       <div style="max-width: 1000px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="three-column-grid">
           <div class="stat-box">
             <p class="stat-number">15%</p>
             <p>Aumento de productividad en oficinas limpias</p>
@@ -121,7 +140,7 @@ import '../styles/global.css';
     <!-- Services Detail -->
     <section style="padding: 80px 20px; background: white;">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;" class="two-column-grid">
           <div>
             <h2>¿Qué Incluye Nuestro Servicio de Aseo en Oficinas?</h2>
             <p>Nuestro <strong>servicio de limpieza para oficinas</strong> es integral y personalizado:</p>
@@ -149,7 +168,7 @@ import '../styles/global.css';
         <h2 style="text-align: center;">Tipos de Oficinas que Atendemos</h2>
         <p style="text-align: center; color: #666; margin-bottom: 40px;">Nuestro servicio de aseo se adapta a todo tipo de espacios de trabajo</p>
         
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="three-column-grid">
           <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
             <div style="font-size: 50px; margin-bottom: 15px;">🏢</div>
             <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Oficinas Corporativas</h3>

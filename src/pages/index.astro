@@ -64,7 +64,7 @@ import '../styles/global.css';
     img { max-width: 100%; height: auto; }
     .l-canvas { overflow: hidden; }
     .l-header { background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .l-subheader-h { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .l-subheader-h { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     .w-nav { display: flex; gap: 30px; }
     .w-nav-anchor { color: #1a1a1a; font-weight: 500; transition: color 0.3s; }
     .w-nav-anchor:hover { color: #6386FE; }
@@ -77,6 +77,31 @@ import '../styles/global.css';
     .w-separator.size_medium { height: 40px; }
     .w-separator.size_small { height: 15px; }
     .w-separator.size_large { height: 60px; }
+    
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      .l-subheader-h { padding: 12px 15px; flex-direction: column; }
+      .l-subheader-cell { width: 100%; }
+      .l-subheader-cell.at_left { margin-bottom: 15px; text-align: center; }
+      .l-subheader-cell.at_left img { max-width: 150px; }
+      .l-subheader-cell.at_center { display: none; }
+      .l-subheader-cell.at_right { width: 100%; display: flex; justify-content: center; gap: 10px; }
+      .w-nav { display: none; gap: 0; }
+      .h2-inicio { font-size: 1.8rem; }
+      .hero-section { min-height: 350px; background-position: center; padding: 40px 20px; }
+      .hero-title { font-size: 1.8rem !important; margin-bottom: 12px !important; }
+      .hero-subtitle { font-size: 0.95rem !important; margin-bottom: 20px !important; }
+      .us-btn-style_1 { padding: 10px 20px !important; font-size: 14px !important; }
+      .us-btn-style_27 { padding: 8px 16px !important; font-size: 12px !important; }
+      .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
+      .services-grid a img { height: 200px !important; }
+      .why-choose-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+      .contact-form-grid { grid-template-columns: 1fr !important; }
+      .contact-form-grid input, .contact-form-grid textarea { font-size: 14px !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; text-align: center; }
+      .image-gallery { grid-template-columns: 1fr !important; }
+      section { padding: 40px 20px !important; }
+    }
   </style>
 </head>
 <body>
@@ -135,13 +160,13 @@ import '../styles/global.css';
 
   <main>
     <!-- Hero Section -->
-    <section style="background-image: url(/images/SAFE-CLEANING-elementos-16-def.webp); background-position: center right; background-repeat: no-repeat; background-size: cover; min-height: 600px; display: flex; align-items: center;">
+    <section style="background-image: url(/images/SAFE-CLEANING-elementos-16-def.webp); background-position: center right; background-repeat: no-repeat; background-size: cover; min-height: 600px; display: flex; align-items: center;" class="hero-section">
       <div style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; width: 100%;">
         <div style="max-width: 600px;">
-          <h1 style="font-size: 3.5rem; font-weight: 400; color: white; margin-bottom: 16px; line-height: 1.2;">
+          <h1 style="font-size: 3.5rem; font-weight: 400; color: white; margin-bottom: 16px; line-height: 1.2;" class="hero-title">
             Servicios profesionales de aseo industrial en Santiago
           </h1>
-          <h6 style="font-size: 1.2rem; font-weight: 300; color: white; margin-bottom: 32px;">
+          <h6 style="font-size: 1.2rem; font-weight: 300; color: white; margin-bottom: 32px;" class="hero-subtitle">
             Limpieza personalizada, profunda y sustentable para oficinas, colegios, bodegas, malls y más.
           </h6>
           <a href="/servicios" class="us-btn-style_1">
@@ -162,7 +187,7 @@ import '../styles/global.css';
         <div class="w-separator size_small"></div>
         
         <!-- Services Grid -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="services-grid">
           <a href="/aseo-en-condominios" style="display: block; border-radius: 10px; overflow: hidden; position: relative;">
             <img src="/images/SAFE-CLEANING-SERVICIOS-08.webp" alt="Servicio de aseo y limpieza profesional en condominios Santiago - Safe Cleaning" style="width: 100%; height: 300px; object-fit: cover;" />
             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 20px; color: white;">
@@ -218,7 +243,7 @@ import '../styles/global.css';
     <!-- Why Choose Us Section -->
     <section id="Por-qué-elegirnos" style="padding: 80px 20px; background: white;">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;" class="why-choose-grid">
           <!-- Left Column -->
           <div>
             <div style="display: inline-block; background: #6386FE; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; margin-bottom: 30px;">
@@ -259,7 +284,7 @@ import '../styles/global.css';
           <!-- Right Column -->
           <div>
             <img src="/images/SAFE-CLEANING-elementos-28.webp" alt="Servicios de limpieza industrial y aseo profesional Safe Cleaning Chile" style="width: 100%; border-radius: 10px; margin-bottom: 20px;" />
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="image-gallery">
               <img src="/images/SAFE-CLEANING-elementos-30-1.webp" alt="Personal de aseo industrial realizando limpieza profunda" style="width: 100%; border-radius: 10px;" />
               <img src="/images/SAFE-CLEANING-elementos-29-1.webp" alt="Equipos y productos profesionales de limpieza ecológica" style="width: 100%; border-radius: 10px;" />
             </div>
@@ -333,7 +358,7 @@ import '../styles/global.css';
         <p style="color: white; margin-bottom: 30px;"><strong>Contacta</strong> con nosotros para obtener más información sobre nuestros servicios</p>
         
         <form style="display: flex; flex-direction: column; gap: 15px;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;" class="contact-form-grid">
             <input type="text" placeholder="Nombre" style="padding: 12px 20px; border: none; border-radius: 20px; background: rgba(255,255,255,0.2); color: white; font-family: inherit;" />
             <input type="email" placeholder="Email" style="padding: 12px 20px; border: none; border-radius: 20px; background: rgba(255,255,255,0.2); color: white; font-family: inherit;" />
             <input type="tel" placeholder="Número" style="padding: 12px 20px; border: none; border-radius: 20px; background: rgba(255,255,255,0.2); color: white; font-family: inherit;" />
@@ -350,7 +375,7 @@ import '../styles/global.css';
   <!-- Footer -->
   <footer style="background: #333; color: white; padding: 60px 20px;">
     <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start;" class="footer-grid">
         <!-- Logo -->
         <div style="text-align: center;">
           <img src="/images/logo-b.png" alt="Safe Cleaning" style="max-width: 250px;" />

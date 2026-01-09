@@ -32,6 +32,22 @@ import '../styles/global.css';
     h2 { font-size: 2rem; font-weight: 500; margin-bottom: 25px; color: #092241; }
     h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 20px; color: #1a1a1a; }
     p { margin-bottom: 20px; color: #444; }
+    
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      .l-subheader-h { padding: 12px 15px; flex-direction: column; gap: 15px; }
+      .l-subheader-h > div:first-child { width: 100%; text-align: center; }
+      .l-subheader-h > div:first-child img { max-width: 120px; }
+      .w-nav { display: none; }
+      .l-subheader-h > div:last-child { width: 100%; display: flex; justify-content: center; gap: 10px; }
+      h1 { font-size: 1.8rem !important; }
+      h2 { font-size: 1.5rem !important; }
+      h3 { font-size: 1.2rem !important; }
+      .cta-button { padding: 15px 30px !important; font-size: 16px !important; }
+      .two-column-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; text-align: center; }
+      section { padding: 40px 20px !important; }
+    }
   </style>
 </head>
 <body>
