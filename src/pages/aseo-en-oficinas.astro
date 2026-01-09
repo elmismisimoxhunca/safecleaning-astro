@@ -59,21 +59,52 @@ import '../styles/global.css';
 </head>
 <body>
 
+  <!-- Header -->
   <header class="l-header">
     <div class="l-subheader at_middle">
       <div class="l-subheader-h">
-        <div><a href="/"><img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning - Servicio de aseo en oficinas Santiago" /></a></div>
-        <nav class="w-nav">
-          <a class="w-nav-anchor" href="/">Inicio</a>
-          <a class="w-nav-anchor" href="/servicios" style="color: #6386FE;">Servicios de Aseo</a>
-          <a class="w-nav-anchor" href="/bolsas-de-basura">Bolsas de Basura</a>
-          <a class="w-nav-anchor" href="/sobre-nosotros">Sobre Nosotros</a>
-          <a class="w-nav-anchor" href="/blog">Blog</a>
-          <a class="w-nav-anchor" href="/contacto">Contacto</a>
-        </nav>
-        <div style="display: flex; gap: 10px;">
-          <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl"><span>✉</span></a>
-          <a class="us-btn-style_27" href="tel:56983654053">+56 9 8365 4053</a>
+        <!-- Logo -->
+        <div class="l-subheader-cell at_left">
+          <a href="/" aria-label="Safe Cleaning - Inicio" title="Safe Cleaning - Empresa de aseo industrial">
+            <img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning - Empresa de aseo industrial y limpieza profesional en Santiago Chile" />
+          </a>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="l-subheader-cell at_center">
+          <nav class="w-nav">
+            <a class="w-nav-anchor" href="/" title="Inicio - Safe Cleaning">Inicio</a>
+            <div class="nav-dropdown" style="position: relative;">
+              <a class="w-nav-anchor" href="/servicios" title="Servicios de aseo industrial" style="display: flex; align-items: center; gap: 5px;">Servicios de Aseo <span style="font-size: 10px;">▼</span></a>
+              <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 10px; padding: 15px 0; z-index: 200;">
+                <a href="/aseo-en-condominios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Condominios</a>
+                <a href="/aseo-en-colegios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Colegios</a>
+                <a href="/aseo-en-oficinas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Oficinas</a>
+                <a href="/aseo-en-empresas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Empresas</a>
+                <a href="/aseo-en-centros-comerciales" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Centros Comerciales</a>
+                <a href="/aseo-en-bodegas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Bodegas</a>
+                <a href="/aseo-en-strip-center" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Strip Center</a>
+                <div style="border-top: 1px solid #eee; margin: 10px 0;"></div>
+                <a href="/servicios" style="display: block; padding: 10px 20px; color: #6386FE; font-size: 14px; font-weight: 500;">Ver todos los servicios →</a>
+              </div>
+            </div>
+            <a class="w-nav-anchor" href="/bolsas-de-basura" title="Venta de bolsas de basura industriales">Bolsas de Basura</a>
+            <a class="w-nav-anchor" href="/sobre-nosotros" title="Conoce Safe Cleaning">Sobre Nosotros</a>
+            <a class="w-nav-anchor" href="/blog" title="Blog de limpieza industrial">Blog</a>
+            <a class="w-nav-anchor" href="/contacto" title="Contactar y cotizar servicios">Contacto</a>
+          </nav>
+        </div>
+        
+        <!-- Contact Buttons -->
+        <div class="l-subheader-cell at_right">
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
+              <span style="font-size: 16px;">✉</span>
+            </a>
+            <a class="us-btn-style_27" href="tel:56983654053">
+              +56 9 8365 4053
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -226,22 +257,43 @@ import '../styles/global.css';
     </section>
   </main>
 
+  <!-- Footer -->
   <footer style="background: #333; color: white; padding: 60px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;">
-      <div style="text-align: center;"><img src="/images/logo-b.png" alt="Safe Cleaning Logo" style="max-width: 250px;" /></div>
-      <div>
-        <h4 style="margin-bottom: 20px;">Contacto</h4>
-        <p><a href="tel:56983654053" style="color: white;">+56 9 8365 4053</a></p>
-        <p><a href="mailto:contacto@safecleaning.cl" style="color: white;">contacto@safecleaning.cl</a></p>
-      </div>
-      <div>
-        <h4 style="margin-bottom: 10px;">Servicios de Aseo</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 8px;"><a href="/aseo-en-oficinas" style="color: #6386FE;">Aseo en Oficinas</a></li>
-          <li style="margin-bottom: 8px;"><a href="/aseo-en-condominios" style="color: #ccc;">Aseo en Condominios</a></li>
-          <li style="margin-bottom: 8px;"><a href="/aseo-en-colegios" style="color: #ccc;">Aseo en Colegios</a></li>
-          <li style="margin-bottom: 8px;"><a href="/aseo-en-empresas" style="color: #ccc;">Aseo en Empresas</a></li>
-        </ul>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start;" class="footer-grid">
+        <!-- Logo -->
+        <div style="text-align: center;">
+          <img src="/images/logo-b.png" alt="Safe Cleaning" style="max-width: 250px;" />
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 20px;">Datos de Contacto</h4>
+          <div class="w-separator size_small"></div>
+          <p style="margin-bottom: 15px;">
+            Teléfono:<br />
+            <a href="tel:56983654053" style="color: white;">+56 9 8365 4053</a>
+          </p>
+          <p style="margin-bottom: 15px;">
+            Email:<br />
+            <a href="mailto:contacto@safecleaning.cl" style="color: white;">contacto@safecleaning.cl</a>
+          </p>
+          <p>
+            Dirección:<br />
+            <a href="https://maps.app.goo.gl/mFGF3pYM1W8C8HvP8" target="_blank" style="color: white;">San Antonio 510, of 408, Santiago Centro</a>
+          </p>
+        </div>
+        
+        <!-- Work With Us -->
+        <div>
+          <h4 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 10px;">Trabaja con Nosotros</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 20px;">¡Envíanos tu currículum!</p>
+          <div class="w-separator size_small"></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="/contacto" class="us-btn-style_27" style="text-align: center;">Subir CV</a>
+            <a href="/contacto" style="background: #e8e8e8; color: #000; padding: 10px 20px; border-radius: 50px; font-weight: 500; font-size: 14px; text-align: center;">Contactar</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>

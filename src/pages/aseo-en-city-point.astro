@@ -48,24 +48,51 @@ import '../styles/global.css';
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="l-header">
     <div class="l-subheader at_middle">
       <div class="l-subheader-h">
-        <div class="l-subheader-cell at_left"><a href="/"><img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning" /></a></div>
+        <!-- Logo -->
+        <div class="l-subheader-cell at_left">
+          <a href="/" aria-label="Safe Cleaning - Inicio" title="Safe Cleaning - Empresa de aseo industrial">
+            <img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning - Empresa de aseo industrial y limpieza profesional en Santiago Chile" />
+          </a>
+        </div>
+        
+        <!-- Navigation -->
         <div class="l-subheader-cell at_center">
           <nav class="w-nav">
-            <a class="w-nav-anchor" href="/">Inicio</a>
-            <a class="w-nav-anchor" href="/servicios" style="color: #6386FE;">Servicios</a>
-            <a class="w-nav-anchor" href="/bolsas-de-basura">Bolsas de Basura</a>
-            <a class="w-nav-anchor" href="/sobre-nosotros">Sobre Nosotros</a>
-            <a class="w-nav-anchor" href="/blog">Blog</a>
-            <a class="w-nav-anchor" href="/contacto">Contacto</a>
+            <a class="w-nav-anchor" href="/" title="Inicio - Safe Cleaning">Inicio</a>
+            <div class="nav-dropdown" style="position: relative;">
+              <a class="w-nav-anchor" href="/servicios" title="Servicios de aseo industrial" style="display: flex; align-items: center; gap: 5px;">Servicios de Aseo <span style="font-size: 10px;">▼</span></a>
+              <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 10px; padding: 15px 0; z-index: 200;">
+                <a href="/aseo-en-condominios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Condominios</a>
+                <a href="/aseo-en-colegios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Colegios</a>
+                <a href="/aseo-en-oficinas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Oficinas</a>
+                <a href="/aseo-en-empresas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Empresas</a>
+                <a href="/aseo-en-centros-comerciales" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Centros Comerciales</a>
+                <a href="/aseo-en-bodegas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Bodegas</a>
+                <a href="/aseo-en-strip-center" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Strip Center</a>
+                <div style="border-top: 1px solid #eee; margin: 10px 0;"></div>
+                <a href="/servicios" style="display: block; padding: 10px 20px; color: #6386FE; font-size: 14px; font-weight: 500;">Ver todos los servicios →</a>
+              </div>
+            </div>
+            <a class="w-nav-anchor" href="/bolsas-de-basura" title="Venta de bolsas de basura industriales">Bolsas de Basura</a>
+            <a class="w-nav-anchor" href="/sobre-nosotros" title="Conoce Safe Cleaning">Sobre Nosotros</a>
+            <a class="w-nav-anchor" href="/blog" title="Blog de limpieza industrial">Blog</a>
+            <a class="w-nav-anchor" href="/contacto" title="Contactar y cotizar servicios">Contacto</a>
           </nav>
         </div>
+        
+        <!-- Contact Buttons -->
         <div class="l-subheader-cell at_right">
           <div style="display: flex; gap: 10px; align-items: center;">
-            <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl"><span style="font-size: 16px;">✉</span></a>
-            <a class="us-btn-style_27" href="tel:56983654053">+56 9 8365 4053</a>
+            <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
+              <span style="font-size: 16px;">✉</span>
+            </a>
+            <a class="us-btn-style_27" href="tel:56983654053">
+              +56 9 8365 4053
+            </a>
           </div>
         </div>
       </div>
