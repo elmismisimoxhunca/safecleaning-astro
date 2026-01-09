@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: safecleaning-astro
     ports:
-      - "4323:4323"
+      - "80:80"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
