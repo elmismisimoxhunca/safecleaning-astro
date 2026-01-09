@@ -1,0 +1,67 @@
+---
+---
+
+<header style="background-color: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; padding-top: 16px; padding-bottom: 16px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="font-size: 24px; font-weight: bold; color: #1a5f3f;">Safe Cleaning</div>
+    </div>
+    
+    <nav style="display: none; gap: 32px;" class="nav-desktop">
+      <a href="/" style="color: #555; text-decoration: none; cursor: pointer;">Inicio</a>
+      <a href="/#servicios" style="color: #555; text-decoration: none; cursor: pointer;">Servicios</a>
+      <a href="/#sustentabilidad" style="color: #555; text-decoration: none; cursor: pointer;">Sustentabilidad</a>
+      <a href="/contacto" style="color: #555; text-decoration: none; cursor: pointer;">Contacto</a>
+    </nav>
+
+    <button id="menu-toggle" style="display: none; background: none; border: none; cursor: pointer;" class="menu-toggle-btn">
+      <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" style="display: none; background-color: white; border-top: 1px solid #ddd;" class="mobile-nav">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 16px; padding-bottom: 16px; display: flex; flex-direction: column; gap: 16px;">
+      <a href="/" style="color: #555; text-decoration: none; cursor: pointer;">Inicio</a>
+      <a href="/#servicios" style="color: #555; text-decoration: none; cursor: pointer;">Servicios</a>
+      <a href="/#sustentabilidad" style="color: #555; text-decoration: none; cursor: pointer;">Sustentabilidad</a>
+      <a href="/contacto" style="color: #555; text-decoration: none; cursor: pointer;">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  @media (min-width: 768px) {
+    .nav-desktop {
+      display: flex !important;
+    }
+    .menu-toggle-btn {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .nav-desktop {
+      display: none !important;
+    }
+    .menu-toggle-btn {
+      display: block !important;
+    }
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      if (mobileMenu.style.display === 'none') {
+        mobileMenu.style.display = 'block';
+      } else {
+        mobileMenu.style.display = 'none';
+      }
+    });
+  }
+</script>

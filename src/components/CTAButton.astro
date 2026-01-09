@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  text: string;
+  variant?: 'primary' | 'secondary' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { href, text, variant = 'accent', size = 'md' } = Astro.props;
+
+const variantClasses = {
+  primary: 'bg-primary hover:bg-secondary',
+  secondary: 'bg-secondary hover:bg-primary',
+  accent: 'bg-accent hover:bg-green-600',
+};
+
+const sizeClasses = {
+  sm: 'py-2 px-4 text-sm',
+  md: 'py-3 px-8 text-base',
+  lg: 'py-4 px-10 text-lg',
+};
+---
+
+<a href={href} class={`inline-block ${variantClasses[variant]} text-white font-bold ${sizeClasses[size]} rounded-lg transition`}>
+  {text}
+</a>
