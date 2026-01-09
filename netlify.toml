@@ -3,6 +3,31 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/aseo-en-condominios-en-la-florida"
+  to = "/aseo-en-condominios/la-florida"
+  status = 301
+
+[[redirects]]
+  from = "/aseo-en-condominios-en-las-condes"
+  to = "/aseo-en-condominios/las-condes"
+  status = 301
+
+[[redirects]]
+  from = "/aseo-en-colegios-en-la-florida"
+  to = "/aseo-en-colegios/la-florida"
+  status = 301
+
+[[redirects]]
+  from = "/aseo-en-colegios-en-las-condes"
+  to = "/aseo-en-colegios/las-condes"
+  status = 301
+
+[[redirects]]
+  from = "/aseo-en-oficinas-en-las-condes"
+  to = "/aseo-en-oficinas/las-condes"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

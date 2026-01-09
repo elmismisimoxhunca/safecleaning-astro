@@ -14,6 +14,15 @@ import '../styles/global.css';
   <link rel="canonical" href="https://safecleaning.cl/aseo-en-oficinas">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="icon" href="/images/favicon-safe-cleaning-150x150.png" sizes="32x32">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
@@ -34,8 +43,8 @@ import '../styles/global.css';
     p { margin-bottom: 20px; color: #444; }
     .location-link { display: block; background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; transition: transform 0.3s, box-shadow 0.3s; border-left: 4px solid #6386FE; }
     .location-link:hover { transform: translateX(10px); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-    .stat-box { background: #092241; color: white; padding: 30px; border-radius: 15px; text-align: center; }
-    .stat-number { font-size: 3rem; font-weight: 700; color: #6386FE; }
+    .stat-box { background: white; color: #333; padding: 30px; border-radius: 15px; text-align: center; border: 2px solid #6386FE; }
+    .stat-number { font-size: 3rem; font-weight: 700; color: #092241; }
     
     @media (max-width: 768px) {
       body { font-size: 14px; }
@@ -100,6 +109,9 @@ import '../styles/global.css';
           <div style="display: flex; gap: 10px; align-items: center;">
             <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
               <span style="font-size: 16px;">✉</span>
+            </a>
+            <a class="us-btn-style_29" href="https://wa.me/56983654053" target="_blank" rel="noopener" aria-label="WhatsApp" style="background: #25D366;">
+              <span style="font-size: 16px;">💬</span>
             </a>
             <a class="us-btn-style_27" href="tel:56983654053">
               +56 9 8365 4053

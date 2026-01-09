@@ -13,6 +13,15 @@ import '../styles/global.css';
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="icon" href="/images/favicon-safe-cleaning-150x150.png" sizes="32x32" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.4; color: #1a1a1a; background: #f5f5f5; }
@@ -55,6 +64,9 @@ import '../styles/global.css';
           <div style="display: flex; gap: 10px; align-items: center;">
             <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
               <span style="font-size: 16px;">✉</span>
+            </a>
+            <a class="us-btn-style_29" href="https://wa.me/56983654053" target="_blank" rel="noopener" aria-label="WhatsApp" style="background: #25D366;">
+              <span style="font-size: 16px;">💬</span>
             </a>
             <a class="us-btn-style_27" href="tel:56983654053">+56 9 8365 4053</a>
           </div>
@@ -141,21 +153,6 @@ import '../styles/global.css';
       </div>
     </section>
 
-    <!-- Team Images -->
-    <section style="padding: 80px 20px; background: #f5f5f5;">
-      <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 50px;">
-          <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px;">Nuestro Equipo</h2>
-          <img src="/images/linea-color.png" alt="" style="width: 150px; margin: 0 auto;" />
-        </div>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
-          <img src="/images/SAFE-CLEANING-elementos-27.webp" alt="Equipo Safe Cleaning" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;" />
-          <img src="/images/SAFE-CLEANING-elementos-30-1.webp" alt="Equipo Safe Cleaning" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;" />
-          <img src="/images/SAFE-CLEANING-elementos-29-1.webp" alt="Equipo Safe Cleaning" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px;" />
-        </div>
-      </div>
-    </section>
 
     <!-- CTA Section -->
     <section style="padding: 80px 20px; background: #6386FE; text-align: center;">
