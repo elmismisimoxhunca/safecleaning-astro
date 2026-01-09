@@ -5,11 +5,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "4323:4323"
     container_name: safecleaning-astro
     environment:
       - NODE_ENV=production
     restart: unless-stopped
     volumes:
       - ./dist:/app/dist:ro
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.safecleaning.rule=Host(`safecleaning.cl`) || Host(`www.safecleaning.cl`)"
+      - "traefik.http.routers.safecleaning.entrypoints=web"
+      - "traefik.http.services.safecleaning.loadbalancer.server.port=4323"
+
+networks:
+  traefik:
+    external: true
