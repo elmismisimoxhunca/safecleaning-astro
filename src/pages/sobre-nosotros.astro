@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 ---
 
 <!DOCTYPE html>
@@ -41,39 +42,7 @@ import '../styles/global.css';
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="l-header">
-    <div class="l-subheader at_middle">
-      <div class="l-subheader-h">
-        <div class="l-subheader-cell at_left">
-          <a href="/" aria-label="Safe Cleaning">
-            <img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning" />
-          </a>
-        </div>
-        <div class="l-subheader-cell at_center">
-          <nav class="w-nav">
-            <a class="w-nav-anchor" href="/">Inicio</a>
-            <a class="w-nav-anchor" href="/servicios">Servicios</a>
-            <a class="w-nav-anchor" href="/bolsas-de-basura">Bolsas de Basura</a>
-            <a class="w-nav-anchor" href="/sobre-nosotros" style="color: #6386FE;">Sobre Nosotros</a>
-            <a class="w-nav-anchor" href="/blog">Blog</a>
-            <a class="w-nav-anchor" href="/contacto">Contacto</a>
-          </nav>
-        </div>
-        <div class="l-subheader-cell at_right">
-          <div style="display: flex; gap: 10px; align-items: center;">
-            <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
-              <span style="font-size: 16px;">✉</span>
-            </a>
-            <a class="us-btn-style_29" href="https://wa.me/56983654053" target="_blank" rel="noopener" aria-label="WhatsApp" style="background: #25D366;">
-              <span style="font-size: 16px;">💬</span>
-            </a>
-            <a class="us-btn-style_27" href="tel:56983654053">+56 9 8365 4053</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <Header />
 
   <main>
     <!-- Hero Section -->

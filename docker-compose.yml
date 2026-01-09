@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  app:
+  safecleaning:
     build:
       context: .
       dockerfile: Dockerfile
@@ -23,7 +23,7 @@ services:
       - ./dist:/usr/share/nginx/html:ro
       - ./ssl:/etc/nginx/ssl:ro
     depends_on:
-      - app
+      - safecleaning
     restart: unless-stopped
     networks:
       - safecleaning-network
