@@ -1,33 +1,38 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Aseo en City Point - Safe Cleaning SPA</title>
+  <title>Servicio de Aseo en City Point Santiago | Limpieza Profesional | Safe Cleaning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Servicios de aseo profesional para City Point en Santiago">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Servicio de aseo y limpieza profesional para City Point en Santiago. Servicio de mantención de complejos empresariales, servicio de limpieza de edificios corporativos. Equipos profesionales. Cotización gratis.">
+  <meta name="keywords" content="servicio de aseo city point, servicio de limpieza city point, servicio de mantención city point, limpieza city point Santiago, empresa aseo edificios corporativos, limpieza complejos empresariales, aseo city point, sanitización city point">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://safecleaning.cl/aseo-en-city-point">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="/images/favicon-safe-cleaning-150x150.png" sizes="32x32" />
+  <link rel="icon" href="/images/favicon-safe-cleaning-150x150.png" sizes="32x32">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.4; color: #1a1a1a; background: #f5f5f5; }
+    body { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; }
     .l-header { background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     .l-subheader-h { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
     .w-nav { display: flex; gap: 30px; }
-    .w-nav-anchor { color: #1a1a1a; font-weight: 500; transition: color 0.3s; }
-    .w-nav-anchor:hover { color: #6386FE; }
+    .w-nav-anchor { color: #1a1a1a; font-weight: 500; }
     .us-btn-style_27 { background: #6386FE; color: #fff; padding: 10px 20px; border-radius: 50px; font-weight: 500; font-size: 14px; }
     .us-btn-style_29 { background: #FE0000; color: #fff; padding: 10px; border-radius: 50%; }
-    .us-btn-style_1 { background: #092241; color: #fff; padding: 12px 24px; border-radius: 50px; font-weight: 500; display: inline-flex; align-items: center; gap: 10px; }
-    .check-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; }
-    .check-icon { color: #6386FE; font-weight: bold; font-size: 18px; }
+    .cta-button { background: linear-gradient(135deg, #6386FE, #8B5CF6); color: #fff; padding: 20px 50px; border-radius: 50px; font-weight: 700; font-size: 20px; display: inline-block; text-align: center; box-shadow: 0 10px 30px rgba(99, 134, 254, 0.4); transition: transform 0.3s; }
+    .cta-button:hover { transform: translateY(-3px); }
+    .check-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+    .check-icon { color: #6386FE; font-size: 24px; font-weight: bold; }
+    h2 { font-size: 2rem; font-weight: 500; margin-bottom: 25px; color: #092241; }
+    h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 20px; color: #1a1a1a; }
+    p { margin-bottom: 20px; color: #444; }
     
     @media (max-width: 768px) {
       body { font-size: 14px; }
@@ -48,102 +53,100 @@ import '../styles/global.css';
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="l-header">
-    <div class="l-subheader at_middle">
-      <div class="l-subheader-h">
-        <!-- Logo -->
-        <div class="l-subheader-cell at_left">
-          <a href="/" aria-label="Safe Cleaning - Inicio" title="Safe Cleaning - Empresa de aseo industrial">
-            <img width="200" src="/images/Sin-titulo.png" alt="Safe Cleaning - Empresa de aseo industrial y limpieza profesional en Santiago Chile" />
-          </a>
-        </div>
-        
-        <!-- Navigation -->
-        <div class="l-subheader-cell at_center">
-          <nav class="w-nav">
-            <a class="w-nav-anchor" href="/" title="Inicio - Safe Cleaning">Inicio</a>
-            <div class="nav-dropdown" style="position: relative;">
-              <a class="w-nav-anchor" href="/servicios" title="Servicios de aseo industrial" style="display: flex; align-items: center; gap: 5px;">Servicios de Aseo <span style="font-size: 10px;">▼</span></a>
-              <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 10px; padding: 15px 0; z-index: 200;">
-                <a href="/aseo-en-condominios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Condominios</a>
-                <a href="/aseo-en-colegios" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Colegios</a>
-                <a href="/aseo-en-oficinas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Oficinas</a>
-                <a href="/aseo-en-empresas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Empresas</a>
-                <a href="/aseo-en-centros-comerciales" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Centros Comerciales</a>
-                <a href="/aseo-en-bodegas" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Bodegas</a>
-                <a href="/aseo-en-strip-center" style="display: block; padding: 10px 20px; color: #333; font-size: 14px;">Servicio de Aseo en Strip Center</a>
-                <div style="border-top: 1px solid #eee; margin: 10px 0;"></div>
-                <a href="/servicios" style="display: block; padding: 10px 20px; color: #6386FE; font-size: 14px; font-weight: 500;">Ver todos los servicios →</a>
-              </div>
-            </div>
-            <a class="w-nav-anchor" href="/bolsas-de-basura" title="Venta de bolsas de basura industriales">Bolsas de Basura</a>
-            <a class="w-nav-anchor" href="/sobre-nosotros" title="Conoce Safe Cleaning">Sobre Nosotros</a>
-            <a class="w-nav-anchor" href="/blog" title="Blog de limpieza industrial">Blog</a>
-            <a class="w-nav-anchor" href="/contacto" title="Contactar y cotizar servicios">Contacto</a>
-          </nav>
-        </div>
-        
-        <!-- Contact Buttons -->
-        <div class="l-subheader-cell at_right">
-          <div style="display: flex; gap: 10px; align-items: center;">
-            <a class="us-btn-style_29" href="mailto:contacto@safecleaning.cl" aria-label="Email">
-              <span style="font-size: 16px;">✉</span>
-            </a>
-            <a class="us-btn-style_27" href="tel:56983654053">
-              +56 9 8365 4053
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <Header />
 
   <main>
-    <section style="background-image: linear-gradient(rgba(9, 34, 65, 0.8), rgba(9, 34, 65, 0.8)), url(/images/SAFE-CLEANING-SERVICIOS-12.webp); background-position: center; background-size: cover; padding: 100px 20px; text-align: center;">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <h1 style="font-size: 3rem; font-weight: 400; color: white; margin-bottom: 20px;">Aseo en City Point</h1>
-        <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">Servicios especializados para complejos comerciales y empresariales</p>
+    <section style="background-image: linear-gradient(rgba(9, 34, 65, 0.85), rgba(9, 34, 65, 0.85)), url(/images/SAFE-CLEANING-SERVICIOS-12.webp); background-position: center; background-size: cover; padding: 120px 20px; text-align: center;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; font-weight: 400; color: white; margin-bottom: 20px;">Servicio de Aseo en City Point</h1>
+        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 40px;">Limpieza profesional para complejos empresariales y edificios corporativos en Santiago</p>
+        <a href="/contacto" class="cta-button">COTIZAR SERVICIO GRATIS</a>
       </div>
     </section>
 
     <section style="padding: 80px 20px; background: white;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>¿Por Qué es Importante el Servicio de Aseo Profesional en City Point?</h2>
+        <p style="font-size: 1.1rem;">
+          Los <strong>complejos City Point</strong> combinan espacios comerciales y empresariales que requieren un <strong>servicio de limpieza especializado</strong>. La imagen de estos complejos depende directamente de su limpieza: un espacio impecable atrae más empresas, mejora la experiencia de visitantes y aumenta el valor de los espacios.
+        </p>
+        <p>
+          En <strong>Safe Cleaning</strong> somos especialistas en <strong>servicio de aseo para City Point en Santiago</strong>. Entendemos los desafíos únicos de estos espacios: múltiples empresas, áreas de alto tráfico, estacionamientos, lobbies corporativos y la necesidad de mantener una imagen profesional impecable.
+        </p>
+        <p>
+          Nuestro <strong>servicio de mantención de complejos empresariales</strong> incluye equipos de respuesta rápida para emergencias, limpieza programada de todas las áreas y personal capacitado para trabajar en espacios corporativos de alta exigencia. Utilizamos <strong>equipos profesionales</strong> y <strong>productos de limpieza de calidad industrial</strong> que garantizan resultados óptimos.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding: 60px 20px; background: linear-gradient(135deg, #6386FE, #8B5CF6); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: white; margin-bottom: 20px;">¿Administras un City Point?</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 30px;">Solicita una cotización gratuita para tu complejo</p>
+        <a href="/contacto" class="cta-button" style="background: white; color: #6386FE;">COTIZAR AHORA →</a>
+      </div>
+    </section>
+
+    <section style="padding: 80px 20px; background: #f5f5f5;">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;" class="two-column-grid">
           <div>
-            <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 25px;">Nuestro Servicio</h2>
-            <p style="color: #666; line-height: 1.8; margin-bottom: 25px;">Los complejos City Point combinan espacios comerciales y empresariales que requieren un mantenimiento especializado. Safe Cleaning ofrece soluciones integrales para estos espacios.</p>
+            <h2>¿Qué Incluye Nuestro Servicio de Aseo en City Point?</h2>
+            <p>Nuestro <strong>servicio de limpieza para complejos empresariales</strong> es integral y adaptado a cada complejo:</p>
             
-            <h3 style="font-size: 1.3rem; font-weight: 500; color: #092241; margin-bottom: 20px;">Lo que incluye nuestro servicio:</h3>
-            <div style="margin-bottom: 30px;">
-              <div class="check-item"><span class="check-icon">✓</span><span>Limpieza de áreas comunes</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Mantenimiento de lobbies</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Limpieza de ascensores</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Mantenimiento de estacionamientos</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Limpieza de fachadas</span></div>
-              <div class="check-item"><span class="check-icon">✓</span><span>Servicios personalizados</span></div>
-            </div>
-
-            <div style="background: #f5f5f5; border-left: 4px solid #6386FE; padding: 20px; border-radius: 5px; margin-bottom: 30px;">
-              <p style="color: #666; line-height: 1.6;">Trabajamos con administradores de edificios para crear planes de limpieza que se adapten a las necesidades específicas de cada complejo.</p>
-            </div>
-
-            <a href="/contacto" class="us-btn-style_1"><span>Cotiza tu servicio</span></a>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Limpieza de áreas comunes:</strong> Barrido, trapeado y lustrado continuo de pasillos, lobbies y espacios compartidos.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Mantenimiento de lobbies corporativos:</strong> Limpieza de pisos, vidrios, mobiliario y áreas de recepción.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Desinfección de ascensores:</strong> Limpieza profunda de cabinas, botones, espejos y puertas.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Aseo de estacionamientos:</strong> Barrido, limpieza de manchas y mantención de señalética.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Limpieza de fachadas y vidrios:</strong> Ventanales, puertas de acceso y superficies exteriores.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Sanitización de baños públicos:</strong> Limpieza y desinfección múltiples veces al día.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Servicios personalizados:</strong> Planes adaptados a las necesidades específicas del complejo.</div></div>
+            <div class="check-item"><span class="check-icon">✓</span><div><strong>Respuesta a emergencias:</strong> Equipo disponible para derrames y situaciones imprevistas.</div></div>
           </div>
-          
           <div>
-            <img src="/images/SAFE-CLEANING-SERVICIOS-12.webp" alt="Aseo en City Point" style="width: 100%; border-radius: 10px; margin-bottom: 20px;" />
-            <img src="/images/SAFE-CLEANING-elementos-27.webp" alt="Equipo de limpieza" style="width: 100%; border-radius: 10px;" />
+            <img src="/images/SAFE-CLEANING-SERVICIOS-12.webp" alt="Servicio de aseo profesional en City Point Santiago" style="width: 100%; border-radius: 15px; margin-bottom: 20px;" />
+            <img src="/images/SAFE-CLEANING-elementos-27.webp" alt="Equipo de limpieza profesional para complejos empresariales" style="width: 100%; border-radius: 15px;" />
           </div>
         </div>
       </div>
     </section>
 
-    <section style="padding: 80px 20px; background: #6386FE; text-align: center;">
+    <section style="padding: 80px 20px; background: white; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size: 2rem; font-weight: 400; color: white; margin-bottom: 20px;">¿Necesitas aseo para tu City Point?</h2>
-        <p style="color: rgba(255,255,255,0.9); margin-bottom: 30px;">Contáctanos y te enviaremos una cotización personalizada</p>
-        <a href="/contacto" style="background: #092241; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 500; display: inline-block;">Contactar ahora</a>
+        <h2 style="color: #092241;">Beneficios de Contratar Safe Cleaning para tu City Point</h2>
+        <p style="color: #666; margin-bottom: 40px;">Mejora la imagen y valor de tu complejo empresarial</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;" class="two-column-grid">
+          <div style="background: #f8f9fa; padding: 30px; border-radius: 15px;">
+            <div style="font-size: 40px; margin-bottom: 15px;">🏢</div>
+            <h3 style="color: #6386FE; margin-bottom: 10px;">Imagen Profesional</h3>
+            <p style="color: #666; font-size: 0.9rem;">Atrae empresas de calidad con espacios impecables y bien mantenidos.</p>
+          </div>
+          <div style="background: #f8f9fa; padding: 30px; border-radius: 15px;">
+            <div style="font-size: 40px; margin-bottom: 15px;">💼</div>
+            <h3 style="color: #6386FE; margin-bottom: 10px;">Valor Agregado</h3>
+            <p style="color: #666; font-size: 0.9rem;">Aumenta el valor de los espacios y la satisfacción de inquilinos.</p>
+          </div>
+          <div style="background: #f8f9fa; padding: 30px; border-radius: 15px;">
+            <div style="font-size: 40px; margin-bottom: 15px;">🛡️</div>
+            <h3 style="color: #6386FE; margin-bottom: 10px;">Seguridad e Higiene</h3>
+            <p style="color: #666; font-size: 0.9rem;">Espacios seguros y saludables para empleados y visitantes.</p>
+          </div>
+          <div style="background: #f8f9fa; padding: 30px; border-radius: 15px;">
+            <div style="font-size: 40px; margin-bottom: 15px;">📊</div>
+            <h3 style="color: #6386FE; margin-bottom: 10px;">Gestión Eficiente</h3>
+            <p style="color: #666; font-size: 0.9rem;">Reportes periódicos y supervisión constante de calidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 100px 20px; background: linear-gradient(135deg, #092241, #1a3a5c); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">¿Listo para Mejorar la Limpieza de tu City Point?</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px;">Contáctanos hoy y recibe una cotización gratuita</p>
+        <a href="/contacto" class="cta-button" style="font-size: 22px; padding: 25px 60px; background: #6386FE;">COTIZAR SERVICIO DE ASEO</a>
+        <p style="color: rgba(255,255,255,0.7); margin-top: 20px;">O llámanos al <a href="tel:56983654053" style="color: #6386FE; font-weight: 600;">+56 9 8365 4053</a></p>
       </div>
     </section>
   </main>
